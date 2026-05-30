@@ -121,5 +121,6 @@ dist-ssr/
 
 # Vercel build artifacts
 api/handler.js
+api/handler.cjs
 dist/
 .vercel

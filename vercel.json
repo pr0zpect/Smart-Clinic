@@ -13,7 +13,7 @@
         }
     ],
     "functions": {
-        "api/handler.js": {
+        "api/handler.cjs": {
             "maxDuration": 30
         }
     }
