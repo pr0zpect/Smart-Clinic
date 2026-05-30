@@ -1,4 +1,5 @@
-import "dotenv/config";
+// dotenv not needed on Vercel — env vars are injected natively
+// Only load locally via process.env fallback
 import express from "express";
 import cors from "cors";
 import { registerRoutes } from "./routes";
@@ -24,7 +25,6 @@ const initPromise = registerRoutes(httpServer, app).catch((err) => {
 });
 
 // Vercel calls this default export as the serverless handler
-// We wait for route initialization before handling any request
 export default async function handler(req: any, res: any) {
     try {
         await initPromise;
